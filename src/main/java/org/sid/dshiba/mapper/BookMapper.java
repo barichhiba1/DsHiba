@@ -16,4 +16,7 @@ public class BookMapper {
     public BookDto BookToBookDto(Book book) {
         return mapper.map(book, BookDto.class);
     }
+
+    public BookDto fromBookToBookDto(Book book) {return mapper.map(book, BookDto.class);
+    }
 }

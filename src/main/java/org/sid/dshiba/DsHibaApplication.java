@@ -19,6 +19,7 @@ public class DsHibaApplication {
     CommandLineRunner start(BookService bookService) {
         return args -> {
 
+
             bookService.saveBook(
                     (BookDto) List.of(
                             BookDto.builder().title("tit1").author("auth1").genre("romance").price(20.20).isbn("ndndsj").build(),
@@ -26,7 +27,6 @@ public class DsHibaApplication {
                             BookDto.builder().title("tit3").author("auth3").genre("romance").price(270.20).isbn("npppj").build(),
                             BookDto.builder().title("tit4").author("auth4").genre("fiction").price(50.20).isbn("nmam,dj").build()
                     )
-
             );
         };
     }
